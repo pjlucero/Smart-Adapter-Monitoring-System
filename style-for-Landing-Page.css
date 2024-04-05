@@ -16,10 +16,11 @@ header{
 }
 
 nav{
+    background-color: #C9F6FF;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2% 5%;
+    padding: 0px 30px 0px 30px;
 }
 
 .logo{
