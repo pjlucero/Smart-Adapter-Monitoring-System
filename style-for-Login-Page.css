@@ -12,14 +12,14 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDHm4h1JrOoeBRieOAERZf6Zr1N58E70RiqMiyq1B5wQ&s) no-repeat;
+    background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_wxj1hQyrrJmTw9rW9lne7bA-ie_VqktsIsdUCD6wRQ&s) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .wrapper {
     width: 420px;
-    background: transparent;
+    background: #35D6ED;
     border: 2px solid rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     box-shadow: 0 0 10px rgba(0,0,0, .2);
