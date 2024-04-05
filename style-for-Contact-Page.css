@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap");
+
 *{
     margin: 0;
     padding: 0;
@@ -17,10 +19,11 @@ body{
 }
 
 nav{
+    background-color: #C9F6FF;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2% 5%;
+    padding: 0px 30px 0px 30px;
 }
 
 .logo{
@@ -73,19 +76,20 @@ nav ul li a{
 .contact-right{
     flex-basis: 40%;
     padding: 40px;
-    background: #1c00b5;
+    background: #3498db;
     color: #fff;
 }
 
 h1{
     font-weight: 800;
     font-size: 36px;
-    margin-bottom: 10px;
+    margin: 30px 0px 0px 0px;
 }
 
 .container p{
     font-size: 16px;
     margin-bottom: 40px;
+    margin-top: 10px;
 }
 
 .input-row{
@@ -120,7 +124,7 @@ label{
 }
 
 button{
-    background: #1c00b5;
+    background: #3498db;
     width: 100px;
     border: none;
     outline: none;
@@ -136,17 +140,19 @@ button{
 
 button:hover{
     background-color: transparent;
-    border: 1px solid #1c00b5;
+    border: 2px solid #3498db;
     color: #000;
 }
 
 .contact-left h3{
+    font-size: 24px;
     color: #1c00b5;
     font-weight: 600;
     margin-bottom: 30px;
 }
 
 .contact-right h3{
+    font-size: 24px;
     font-weight: 600;
     margin-bottom: 30px;
 }
@@ -156,5 +162,6 @@ tr td:first-child{
 }
 
 tr td{
-    padding-top: 20px;
+    font-size: 15px;
+    padding-top: 0px;
 }
