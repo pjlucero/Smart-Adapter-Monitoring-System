@@ -7,7 +7,7 @@ document.getElementById('login-form').addEventListener('submit', function(event)
     // For simplicity, let's assume the username is "admin" and password is "password"
     if (username === 'admin' && password === 'password') {
         // Redirect to dashboard page
-        window.location.href = 'script1.html';
+        window.location.href = 'test1.html';
     } else {
         alert('Invalid username or password. Please try again.');
     }
