@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Montserrat font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Dashboard-2.css">
+</head>
+<body>
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">search</span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">notifications</span>
+                <span class="material-icons-outlined">email</span>
+                <span class="material-icons-outlined">account_circle</span>
+            </div>
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">shopping_cart</span> STORE
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">close</span>
+            </div>
+
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">dashboard</span> Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">inventory_2</span> Products
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">category</span> Categories
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">groups</span> Costumers
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">fact_check</span> Inventory
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">poll</span> Reports
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">settings</span> Settings
+                </li>
+                <li class="sidebar-list-item">
+                    <a class="btn" href="New Login.html">Logout</a>
+                </li>
+            </ul>
+             <form action="https://sheetdb.io/api/v1/o3b4dnpud6z6j" method="post" id="sheetdb-form">
+                <button type="submit" class="btn">OFF</button>
+             </form>
+        </aside>
+        <!-- End Sidebar -->
+
+        <div class="image">
+            <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQckD0xwBR3nbkHwwnEw0jNpyH9dRmDchqalwRg-L3H6h1d6Ej_eFmuh1fY4BpZe8Lu4wGD3v1GjQIB/pubhtml?gid=552887280&amp;single=false&amp;headers=false&amp;top-bar=false&amp;" width="1360px" height="610px"></iframe>
+        </div>
+
+    </div>
+
+    <!-- Scripts -->
+    <!-- Apex Charts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.48.0/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="Dashboard-2.js"></script>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            var data = {
+                value: "1" // Replace with the value you want to send to cell D2
+            };
+
+            fetch('https://script.google.com/macros/s/AKfycbzUHM6sgJW-31w4R1b3e2CJbs92q38OvpNpdCJSs_vOLP0Io7DAiRCUqeTDcXRiu_iJ/exec', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => console.log(response))
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration | Smart Adapter Monitoring System</title>
+    <link rel="stylesheet" href="style-for-Registration-Page.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img><img src="image1.png" alt="">
+                </a>
+            </div>
+        </nav>
+        <form action="https://sheetdb.io/api/v1/o3b4dnpud6z6j" method="post" id="sheetdb-form">
+            <h1>Register</h1>
+            <div class="input-box">
+                <label for="name"></label>
+                <input type="text" placeholder="Name" name="data[name]" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <label for="email"></label>
+                <input type="text" placeholder="Email" name="data[email]" required>
+                <i class='bx bxs-envelope' ></i>
+            </div>
+            <div class="input-box">
+                <label for="password"></label>
+                <input type="password" placeholder="Password" name="data[password]" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+
+            <div class="remember-forgot">
+                <label><input type="checkbox" required>I agree to the Terms & Conditions</label>
+            </div>
+
+            <button type="submit" class="btn">Sign Up</button>
+
+            <div class="register-link">
+                <p>Already have an account?<a href="New Login.html"> Sign In</a></p>
+            </div>
+        </form>
+    </div>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+                method: "POST",
+                body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+                response => response.json()
+            ).then((html) => {
+                window.open('successful.html', '_blank');
+            });
+        });
+    </script>
+</body>
+</html>
